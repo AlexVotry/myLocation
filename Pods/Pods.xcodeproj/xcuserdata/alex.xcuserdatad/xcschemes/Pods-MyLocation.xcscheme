@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
-   version = "1.7">
+   LastUpgradeVersion = "0700"
+   version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA33271D1E5CD82800143994"
-               BuildableName = "MyLocation.app"
-               BlueprintName = "MyLocation"
-               ReferencedContainer = "container:MyLocation.xcodeproj">
+               BlueprintIdentifier = "F9B8AFB1C934A3A002CA5D5591ADCC6C"
+               BuildableName = "Pods_MyLocation.framework"
+               BlueprintName = "Pods-MyLocation"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA33271D1E5CD82800143994"
-            BuildableName = "MyLocation.app"
-            BlueprintName = "MyLocation"
-            ReferencedContainer = "container:MyLocation.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -50,25 +41,18 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      allowLocationSimulation = "YES"
-      language = "en"
-      region = "US">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      allowLocationSimulation = "YES">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA33271D1E5CD82800143994"
-            BuildableName = "MyLocation.app"
-            BlueprintName = "MyLocation"
-            ReferencedContainer = "container:MyLocation.xcodeproj">
+            BlueprintIdentifier = "F9B8AFB1C934A3A002CA5D5591ADCC6C"
+            BuildableName = "Pods_MyLocation.framework"
+            BlueprintName = "Pods-MyLocation"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
-      <LocationScenarioReference
-         identifier = "../Seattle.gpx"
-         referenceType = "0">
-      </LocationScenarioReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -76,16 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA33271D1E5CD82800143994"
-            BuildableName = "MyLocation.app"
-            BlueprintName = "MyLocation"
-            ReferencedContainer = "container:MyLocation.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

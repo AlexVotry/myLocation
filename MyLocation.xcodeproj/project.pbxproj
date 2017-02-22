@@ -7,15 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD02D836C6A39EC6F3E71F1F /* Pods_MyLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89212F3ACAD941E4C6C6962C /* Pods_MyLocation.framework */; };
+		FA275EBD1E5CE8EA00549176 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA275EBC1E5CE8EA00549176 /* Alamofire.framework */; };
+		FA275EBF1E5D03F700549176 /* Cops.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA275EBE1E5D03F700549176 /* Cops.swift */; };
+		FA275EC11E5D062C00549176 /* MCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA275EC01E5D062C00549176 /* MCMapView.swift */; };
+		FA275EC41E5D24E300549176 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA275EC31E5D24E300549176 /* JSON.swift */; };
 		FA3327221E5CD82900143994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3327211E5CD82900143994 /* AppDelegate.swift */; };
 		FA3327241E5CD82900143994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3327231E5CD82900143994 /* ViewController.swift */; };
 		FA3327271E5CD82900143994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3327251E5CD82900143994 /* Main.storyboard */; };
 		FA33272A1E5CD82900143994 /* MyLocation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA3327281E5CD82900143994 /* MyLocation.xcdatamodeld */; };
 		FA33272C1E5CD82900143994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA33272B1E5CD82900143994 /* Assets.xcassets */; };
 		FA33272F1E5CD82900143994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA33272D1E5CD82900143994 /* LaunchScreen.storyboard */; };
+		FA3327381E5CD87900143994 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3327371E5CD87900143994 /* MapKit.framework */; };
+		FAAA93C61E5CE4B000B321A1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA93C51E5CE4B000B321A1 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89212F3ACAD941E4C6C6962C /* Pods_MyLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3D68151673CDB90D14DD4B4 /* Pods-MyLocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLocation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyLocation/Pods-MyLocation.debug.xcconfig"; sourceTree = "<group>"; };
+		E3F4C9921789CE8B6F0152AF /* Pods-MyLocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLocation.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyLocation/Pods-MyLocation.release.xcconfig"; sourceTree = "<group>"; };
+		FA275EBC1E5CE8EA00549176 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/MyLocation-episuxxshvknepfcktxpfbfhcaek/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		FA275EBE1E5D03F700549176 /* Cops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cops.swift; sourceTree = "<group>"; };
+		FA275EC01E5D062C00549176 /* MCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMapView.swift; sourceTree = "<group>"; };
+		FA275EC21E5D20BB00549176 /* Seattle.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Seattle.gpx; sourceTree = "<group>"; };
+		FA275EC31E5D24E300549176 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		FA33271E1E5CD82900143994 /* MyLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3327211E5CD82900143994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA3327231E5CD82900143994 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +39,8 @@
 		FA33272B1E5CD82900143994 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA33272E1E5CD82900143994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA3327301E5CD82900143994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA3327371E5CD87900143994 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FAAA93C51E5CE4B000B321A1 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +48,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA275EBD1E5CE8EA00549176 /* Alamofire.framework in Frameworks */,
+				FA3327381E5CD87900143994 /* MapKit.framework in Frameworks */,
+				DD02D836C6A39EC6F3E71F1F /* Pods_MyLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63528357E91E01F3721A2F32 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3D68151673CDB90D14DD4B4 /* Pods-MyLocation.debug.xcconfig */,
+				E3F4C9921789CE8B6F0152AF /* Pods-MyLocation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FA3327151E5CD82800143994 = {
 			isa = PBXGroup;
 			children = (
+				FA275EC31E5D24E300549176 /* JSON.swift */,
+				FA275EC21E5D20BB00549176 /* Seattle.gpx */,
 				FA3327201E5CD82900143994 /* MyLocation */,
 				FA33271F1E5CD82900143994 /* Products */,
+				FA3327361E5CD87900143994 /* Frameworks */,
+				63528357E91E01F3721A2F32 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +96,21 @@
 				FA33272D1E5CD82900143994 /* LaunchScreen.storyboard */,
 				FA3327301E5CD82900143994 /* Info.plist */,
 				FA3327281E5CD82900143994 /* MyLocation.xcdatamodeld */,
+				FAAA93C51E5CE4B000B321A1 /* LocationManager.swift */,
+				FA275EBE1E5D03F700549176 /* Cops.swift */,
+				FA275EC01E5D062C00549176 /* MCMapView.swift */,
 			);
 			path = MyLocation;
+			sourceTree = "<group>";
+		};
+		FA3327361E5CD87900143994 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA275EBC1E5CE8EA00549176 /* Alamofire.framework */,
+				FA3327371E5CD87900143994 /* MapKit.framework */,
+				89212F3ACAD941E4C6C6962C /* Pods_MyLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +120,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA3327331E5CD82900143994 /* Build configuration list for PBXNativeTarget "MyLocation" */;
 			buildPhases = (
+				F76EB45CE0D9E33D010F4823 /* [CP] Check Pods Manifest.lock */,
 				FA33271A1E5CD82800143994 /* Sources */,
 				FA33271B1E5CD82800143994 /* Frameworks */,
 				FA33271C1E5CD82800143994 /* Resources */,
+				7489E1154C4816F12B1F4628 /* [CP] Embed Pods Frameworks */,
+				60ADEE557731242E7C52C38C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,14 +184,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		60ADEE557731242E7C52C38C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyLocation/Pods-MyLocation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7489E1154C4816F12B1F4628 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyLocation/Pods-MyLocation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F76EB45CE0D9E33D010F4823 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA33271A1E5CD82800143994 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAA93C61E5CE4B000B321A1 /* LocationManager.swift in Sources */,
+				FA275EC41E5D24E300549176 /* JSON.swift in Sources */,
 				FA3327241E5CD82900143994 /* ViewController.swift in Sources */,
 				FA33272A1E5CD82900143994 /* MyLocation.xcdatamodeld in Sources */,
+				FA275EBF1E5D03F700549176 /* Cops.swift in Sources */,
 				FA3327221E5CD82900143994 /* AppDelegate.swift in Sources */,
+				FA275EC11E5D062C00549176 /* MCMapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +362,7 @@
 		};
 		FA3327341E5CD82900143994 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3D68151673CDB90D14DD4B4 /* Pods-MyLocation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GVEKQPDQMH;
@@ -274,6 +376,7 @@
 		};
 		FA3327351E5CD82900143994 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3F4C9921789CE8B6F0152AF /* Pods-MyLocation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GVEKQPDQMH;
@@ -304,6 +407,7 @@
 				FA3327351E5CD82900143994 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
