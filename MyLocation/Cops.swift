@@ -24,22 +24,23 @@ class Cops: NSObject, MKAnnotation {
         super.init()
     }
 
-    class func fromJSON(_ json: [JSONValue]) -> Cops? {
+    class func parseInfo(_ crimeReport: NSDictionary ) -> Cops? {
 
         var title: String
-        if let titleOrNil = json[16].string {
-            title = titleOrNil
-        }  else {
-            title = ""
-            }
-            let district = json[12].string
-            let beat = json[15].string
-            let latitude = (json[18].string! as NSString).doubleValue
-            let longitude = (json[19].string! as NSString).doubleValue
-            let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-
-            return Cops(title: title, district: district!, beat: beat!, coordinate: coordinate)
-    }
+        if let tempTitle = crimeReport["event_clearance_description"] {
+            title = tempTitle as! String
+        } else {
+            title = crimeReport["initial_type_description"] as! String
+        }
+       let district = crimeReport["hundred_block_location"] as! String
+       let beat = crimeReport["zone_beat"] as! String
+       let latitudeString = crimeReport["latitude"] as! String
+       let latitude = Double(latitudeString)
+       let longitudeString = crimeReport["longitude"] as! String
+       let longitude = Double(longitudeString)
+       let coordinate = CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!)
+    return Cops(title: title, district: district, beat: beat, coordinate: coordinate)
+   }
 
     var subtitle: String? {
         return district
