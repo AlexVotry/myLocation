@@ -28,10 +28,6 @@
                                     <constraint firstAttribute="height" constant="334" id="v8i-GD-oD5"/>
                                 </constraints>
                             </mapView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YZW-N9-HHK">
-                                <rect key="frame" x="0.0" y="356" width="375" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPU-fX-J2A">
                                 <rect key="frame" x="16" y="617" width="343" height="30"/>
                                 <state key="normal" title="Show the map"/>
@@ -39,6 +35,20 @@
                                     <action selector="MapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCg-P6-fkE"/>
                                 </connections>
                             </button>
+                            <pickerView tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4i-1F-tuv">
+                                <rect key="frame" x="0.0" y="356" width="191" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="cQC-bD-gLp"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YZW-N9-HHK">
+                                <rect key="frame" x="199" y="356" width="176" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Lvn-GT-McK"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -51,6 +61,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="locationPickerView" destination="f4i-1F-tuv" id="aCK-eQ-f8d"/>
                         <outlet property="mapView" destination="pPl-2F-rN8" id="KcW-5i-iws"/>
                         <outlet property="pickerView" destination="YZW-N9-HHK" id="g2U-Qb-TOb"/>
                     </connections>
