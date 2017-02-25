@@ -14,12 +14,14 @@ class Cops: NSObject, MKAnnotation {
     let district: String
     let beat: String
     let coordinate: CLLocationCoordinate2D
+    let crime: String
 
-    init(title: String, district: String, beat: String, coordinate: CLLocationCoordinate2D ) {
+    init(title: String, district: String, beat: String, coordinate: CLLocationCoordinate2D, crime: String ) {
         self.title = title
         self.district = district
         self.beat = beat
         self.coordinate = coordinate
+        self.crime = crime
 
         super.init()
     }
@@ -39,11 +41,67 @@ class Cops: NSObject, MKAnnotation {
        let longitudeString = crimeReport["longitude"] as! String
        let longitude = Double(longitudeString)
        let coordinate = CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!)
-    return Cops(title: title, district: district, beat: beat, coordinate: coordinate)
+       let crime = title
+    return Cops(title: title, district: district, beat: beat, coordinate: coordinate, crime: crime)
    }
 
     var subtitle: String? {
         return district
+    }
+
+    func pinTintColor() -> UIColor {
+      var color: UIColor
+
+        switch crime {
+        case "AUTO THEFT",
+             "THEFT - CAR PROWL",
+             "BICYCLE THEFT":
+          color = MKPinAnnotationView.purplePinColor()
+        case "SUSPICIOUS PERSON",
+             "SUSPICIOUS VEHICLE",
+             "MENTAL COMPLAINT",
+             "MISCHIEF, NUISANCE COMPLAINTS",
+             "LEWD CONDUCT",
+             "NOISE DISTURBANCE",
+             "PORNOGRAPHY":
+          color = MKPinAnnotationView.redPinColor()
+        case "ARMED ROBBERY",
+             "STRONG ARM ROBBERY":
+          color = MKPinAnnotationView.purplePinColor()
+        case "NARCOTICS, OTHER",
+             "LIQUOR VIOLATION - INTOXICATED PERSON",
+             "LIQUOR VIOLATION - ADULT",
+             "NARCOTICS ACTIVITY REPORT",
+             "VICE, OTHER", "CASUALTY - DRUG RELATED (OVERDOSE, OTHER)":
+          color = MKPinAnnotationView.greenPinColor()
+        case "ALARMS - RESIDENTIAL BURGLARY",
+             "BURGLARY - RESIDENTIAL, UNOCCUPIED",
+             "TRESPASS",
+             "BURGLARY - COMMERCIAL",
+             "BURGLARY - UNOCCUPIED STRUCTURE ON RESIDENTIAL PROPERTY",
+             "SUSPICIOUS CIRCUMSTANCES - BUILDING (OPEN DOOR, ETC.)":
+          color = MKPinAnnotationView.purplePinColor()
+        case "HARASSMENT, THREATS":
+          color = MKPinAnnotationView.redPinColor()
+        case "PROPERTY - DAMAGE":
+          color = MKPinAnnotationView.greenPinColor()
+        case "FRAUD (INCLUDING IDENTITY THEFT)",
+             "FORGERY, BAD CHECKS":
+          color = MKPinAnnotationView.purplePinColor()
+        case "ACCIDENT INVESTIGATION":
+          color = MKPinAnnotationView.greenPinColor()
+        case "GANG GRAFFITI":
+          color = MKPinAnnotationView.greenPinColor()
+        case "ASSAULTS, OTHER",
+             "PERSON WITH A WEAPON (NOT GUN)",
+             "PERSON WITH A GUN":
+          color = MKPinAnnotationView.redPinColor()
+        case "MISSING PERSON":
+          color = MKPinAnnotationView.redPinColor()
+        default:
+          color = MKPinAnnotationView.greenPinColor()
+        }
+      return color
     }
 
     func mapItem() -> MKMapItem {

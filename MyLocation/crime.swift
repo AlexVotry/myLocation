@@ -11,7 +11,7 @@ import Foundation
 class Crime {
   var cops = [Cops]()
 
-  func report(_ value: NSArray, criteria: String) -> [Cops]{
+  func report(_ value: NSArray, criteria: NSArray) -> [Cops]{
     cops = []
     for i in 0 ..< value.count
     {
@@ -19,11 +19,14 @@ class Crime {
       {
         if let description = crimeReport["initial_type_description"] as? String
         {
-          if description.range(of: criteria, options: .regularExpression) != nil
-          {
-            if let cop = Cops.parseInfo(crimeReport)
+          for j in 0 ..< criteria.count {
+            let group = criteria[j] as! String
+            if description.range(of: group, options: .regularExpression) != nil
             {
-              cops.append(cop)
+              if let cop = Cops.parseInfo(crimeReport)
+              {
+                cops.append(cop)
+              }
             }
           }
         }

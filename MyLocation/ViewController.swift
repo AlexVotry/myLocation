@@ -21,10 +21,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var cops = [Cops]()
     var group = Crime()
     var criteria: Criteria?
-    var crimes = ["Threats", "Gun Fire", "Assault", "Auto Theft", "All", "Fight", "Suspicious Person", "Theft", "Property Damage", "Fraud", "Traffic Accident", "Disturbance", "Burgulary", "Robbery", "Narcotics"]
+    var crimes = ["Auto Theft", "Suspicious Activity", "Robbery", "Drugs", "Burgulary", "Theft", "All", "Harrassment",  "Fraud", "Property Damage", "Traffic Accident", "Assault", "Missing Person"]
     var locations = ["Ballard", "Northgate", "Greenlake", "University District", "Queen Anne", "Capitol Hill", "Downtown", "Beacon Hill", "West Seattle", "White Center"]
 
-    let regionRadius: CLLocationDistance = 5000
+    let regionRadius: CLLocationDistance = 700
     var currentLocation = CLLocation(latitude: 47.6062, longitude: -122.3321)
 
     override func viewDidLoad() {
@@ -34,10 +34,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         locationPickerView.delegate = self
         locationPickerView.dataSource = self
 
-
 // MARK: center location
         centerMapOnLocation(location: currentLocation)
-        getCrimeData()
     }
 
 // MARK: pickerview (crimes)
@@ -53,6 +51,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(_ picker: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
       let crit = Criteria()
       if picker.tag == 1 {
+        getCrimeData()
         self.mapView.removeAnnotations(self.mapView.annotations)
         crit.crime = crit.matchIt(crimes[row])
       }
@@ -61,8 +60,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
       }
       criteria = crit
       centerMapOnLocation(location: currentLocation)
-//      getCrimeData()
-//      self.mapView.addAnnotations(cops)
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
       if pickerView.tag == 1 {
@@ -86,30 +83,30 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
 // MARK: parse data
     func extractData(_ data: Any) {
+      URLCache.shared.removeAllCachedResponses()
+
       if let crimeReport = data as? NSArray
       {
         if let crime = criteria?.crime
         {
-          if crime == "ALL" {
-            print("hit it")
+          if crime[0] as! String == "ALL" {
             cops = group.reportAll(crimeReport)
+            print("total: \(cops.count)")
           } else {
-            print(crime)
             cops = group.report(crimeReport, criteria: crime)
-            print(cops.count)
+            print("\(crime[0]): \(cops.count)")
           }
         }
       }
     }
-    // MARK: map button
+
+// MARK: show crimes button
     @IBAction func MapButton(_ sender: UIButton) {
         getCrimeData()
-        mapView.removeAnnotations(mapView.annotations)
-        URLCache.shared.removeAllCachedResponses()
         mapView.addAnnotations(cops)
-
         mapView.delegate = self
     }
+
 
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)

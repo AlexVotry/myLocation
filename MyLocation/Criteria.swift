@@ -11,34 +11,41 @@ import MapKit
 
 class Criteria {
 
-    var crime: String?
+    var crime: NSArray?
     var location: String?
     var time: String?
 
-    func matchIt(_ criteria: String) -> String{
-      var crime: String
+    func matchIt(_ criteria: String) -> NSArray {
+      var crime: NSArray
 
       switch criteria {
-      case "Traffic Accident":
-        crime = "ACC"
-      case "Gun Fire":
-        crime = "SHOTS"
+      case "Auto Theft":
+        crime = ["AUTO THEFT", "CAR PROWL", "BICYCLE THEFT"]
+      case "Suspicious Activity":
+        crime = ["SUSPICIOUS", "MENTAL", "MISCHIEF", "NUISANCE", "LEWD", "NOISE"]
+      case "Robbery":
+        crime = ["ROBBERY"]
       case "Theft":
-        crime = "THEFT (DOES NOT INCLUDE SHOPLIFT OR SVCS)"
-      case "Assault":
-        crime = "ASLT - IP/JO - WITH OR W/O WPNS (NO SHOOTINGS)"
-      case "Breaking and Entering":
-        crime = "ALARM - COMM, SILENT/AUD BURG (INCL BANKS)"
+        crime = ["THEFT"]
+      case "Drugs":
+        crime = ["NARC", "LIQUOR", "VICE", "DRUG"]
       case "Burgulary":
-        crime = "BURG - IP/JO - RES (INCL UNOCC STRUCTURES)"
-      case "Property Damage":
-        crime = "PROPERTY - DAMAGE"
+        crime = ["ALARMS", "BURGLARY", "TRESPASS", "BURGLARY - COMMERCIAL", "BURG"]
+      case "Harrassment":
+        crime = ["HARASSMENT", "THREATS", "DISTURBANCE"]
+      case "Fraud":
+        crime = ["FRAUD", "FORGERY, BAD CHECKS"]
+      case "Accident":
+        crime = ["ACCIDENT", "ACC"]
+      case "Assault":
+        crime = ["ASLT", "FIGHT", "SHOTS", "PERSON WITH A GUN", "DOWN"]
+      case "Missing Person":
+        crime = ["MISSING PERSON"]
       default:
-        crime = criteria.uppercased()
+        crime = [criteria.uppercased()]
       }
       return crime
     }
-// ["Ballard", "Northgate", "Greenlake", "University District", "Queen Anne", "Capitol Hill", "Downtown", "Beacon Hill", "West Seattle", "White Center"]
     func locate(_ area: String) -> CLLocation {
       var latitude: Double
       var longitude: Double
