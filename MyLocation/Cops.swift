@@ -50,6 +50,7 @@ class Cops: NSObject, MKAnnotation {
     }
 
     func pinTintColor() -> UIColor {
+
       var color: UIColor
 
         switch crime {

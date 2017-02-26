@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,53 +21,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pPl-2F-rN8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="501"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pPl-2F-rN8">
+                                <rect key="frame" x="0.0" y="30" width="410" height="433"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="334" id="v8i-GD-oD5"/>
+                                    <constraint firstAttribute="width" constant="410" id="xTj-LL-mi9"/>
                                 </constraints>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPU-fX-J2A">
-                                <rect key="frame" x="104" y="562" width="166" height="30"/>
+                            <pickerView tag="1" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="YZW-N9-HHK">
+                                <rect key="frame" x="27" y="432" width="320" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="A1S-JV-esy"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Lvn-GT-McK"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPU-fX-J2A">
+                                <rect key="frame" x="130" y="617" width="114" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Khs-z4-ArC"/>
+                                </constraints>
                                 <state key="normal" title="Show the crimes"/>
                                 <connections>
                                     <action selector="MapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCg-P6-fkE"/>
                                 </connections>
                             </button>
-                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YZW-N9-HHK">
-                                <rect key="frame" x="199" y="356" width="176" height="216"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Lvn-GT-McK"/>
-                                </connections>
-                            </pickerView>
-                            <pickerView tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4i-1F-tuv">
-                                <rect key="frame" x="0.0" y="356" width="191" height="216"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="cQC-bD-gLp"/>
-                                </connections>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WPU-fX-J2A" secondAttribute="bottom" constant="75" id="66i-qx-Oa8"/>
-                            <constraint firstItem="pPl-2F-rN8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="CbJ-zA-Fqs"/>
-                            <constraint firstItem="pPl-2F-rN8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="De3-Wa-N2s"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pPl-2F-rN8" secondAttribute="trailing" constant="-16" id="LEq-2v-kvl"/>
-                            <constraint firstItem="pPl-2F-rN8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="LNt-Qc-SGt"/>
-                            <constraint firstItem="WPU-fX-J2A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mB3-3u-b1U"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WPU-fX-J2A" secondAttribute="bottom" constant="20" id="7AT-S3-1GW"/>
+                            <constraint firstItem="pPl-2F-rN8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="BsE-Dk-fgq"/>
+                            <constraint firstItem="YZW-N9-HHK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LMx-Fh-aka"/>
+                            <constraint firstItem="pPl-2F-rN8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="O5W-i4-WFi"/>
+                            <constraint firstItem="WPU-fX-J2A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sqz-x5-iIH"/>
+                            <constraint firstItem="YZW-N9-HHK" firstAttribute="top" secondItem="pPl-2F-rN8" secondAttribute="bottom" constant="-31" id="hhm-6T-L8N"/>
+                            <constraint firstItem="WPU-fX-J2A" firstAttribute="top" secondItem="YZW-N9-HHK" secondAttribute="bottom" constant="8" id="qHl-X1-iHD"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="locationPickerView" destination="f4i-1F-tuv" id="aCK-eQ-f8d"/>
                         <outlet property="mapView" destination="pPl-2F-rN8" id="KcW-5i-iws"/>
                         <outlet property="pickerView" destination="YZW-N9-HHK" id="g2U-Qb-TOb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="87.200000000000003" y="138.0809595202399"/>
         </scene>
     </scenes>
 </document>

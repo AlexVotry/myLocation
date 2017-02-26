@@ -30,17 +30,17 @@ class Criteria {
       case "Drugs":
         crime = ["NARC", "LIQUOR", "VICE", "DRUG"]
       case "Burgulary":
-        crime = ["ALARMS", "BURGLARY", "TRESPASS", "BURGLARY - COMMERCIAL", "BURG"]
+        crime = ["ALARM", "BURGLARY", "TRESPASS", "BURGLARY - COMMERCIAL", "BURG"]
       case "Harrassment":
-        crime = ["HARASSMENT", "THREATS", "DISTURBANCE"]
+        crime = ["HARASSMENT", "HARAS", "THREATS", "DISTURBANCE"]
       case "Fraud":
         crime = ["FRAUD", "FORGERY, BAD CHECKS"]
-      case "Accident":
+      case "Traffic Accident":
         crime = ["ACCIDENT", "ACC"]
       case "Assault":
-        crime = ["ASLT", "FIGHT", "SHOTS", "PERSON WITH A GUN", "DOWN"]
-      case "Missing Person":
-        crime = ["MISSING PERSON"]
+        crime = ["ASLT", "FIGHT", "SHOTS", "GUN", "DOWN"]
+      case "Property Damage":
+        crime = ["PROPERTY - DAMAGE"]
       default:
         crime = [criteria.uppercased()]
       }

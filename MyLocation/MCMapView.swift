@@ -13,9 +13,9 @@ extension ViewController: MKMapViewDelegate {
        if let annotation = annotation as? Cops {
          let identifier = "copsPin"
          var view: MKPinAnnotationView
-        if let dequedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView {
-            dequedView.annotation = annotation
-            view = dequedView
+        if let pinView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView {
+            pinView.annotation = annotation
+            view = pinView
         } else {
             view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true

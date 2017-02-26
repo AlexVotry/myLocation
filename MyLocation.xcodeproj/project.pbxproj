@@ -22,6 +22,7 @@
 		FA3327381E5CD87900143994 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3327371E5CD87900143994 /* MapKit.framework */; };
 		FA9180F91E5F9E01006016CE /* crime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9180F81E5F9E01006016CE /* crime.swift */; };
 		FAAA93C61E5CE4B000B321A1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA93C51E5CE4B000B321A1 /* LocationManager.swift */; };
+		FAF407161E6250C800D88D38 /* ColorPins.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF407151E6250C800D88D38 /* ColorPins.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		FA3327371E5CD87900143994 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FA9180F81E5F9E01006016CE /* crime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crime.swift; sourceTree = "<group>"; };
 		FAAA93C51E5CE4B000B321A1 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FAF407151E6250C800D88D38 /* ColorPins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPins.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				FA275EC01E5D062C00549176 /* MCMapView.swift */,
 				FA1C33FE1E5F61510048BFD1 /* Criteria.swift */,
 				FA9180F81E5F9E01006016CE /* crime.swift */,
+				FAF407151E6250C800D88D38 /* ColorPins.swift */,
 			);
 			path = MyLocation;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				FA33272A1E5CD82900143994 /* MyLocation.xcdatamodeld in Sources */,
 				FA275EBF1E5D03F700549176 /* Cops.swift in Sources */,
 				FA1C33FF1E5F61510048BFD1 /* Criteria.swift in Sources */,
+				FAF407161E6250C800D88D38 /* ColorPins.swift in Sources */,
 				FA3327221E5CD82900143994 /* AppDelegate.swift in Sources */,
 				FA275EC11E5D062C00549176 /* MCMapView.swift in Sources */,
 			);
