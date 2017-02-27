@@ -21,8 +21,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var group = Crime()
     var criteria: Criteria?
     var pickerData: [[String]] = [[String]]()
-    var crimes = ["Auto Theft", "Suspicious", "Robbery", "Drugs", "Burgulary", "Theft", "All", "Harrassment",  "Fraud", "Property", "Traffic", "Assault"]
-    var locations = ["Ballard", "Northgate", "Greenlake", "University", "Queen Anne", "Capitol Hill", "Downtown", "Beacon Hill", "West Seattle", "White Center"]
+    var crimes = ["Auto Theft", "Suspicious", "Robbery", "Drugs", "Burgulary", "All",  "Theft","Harrassment",  "Fraud", "Property", "Traffic", "Assault"]
+    var locations = ["Ballard", "Northgate", "Greenlake", "University", "Queen Anne", "Downtown",  "Capitol Hill","Beacon Hill", "West Seattle", "White Center"]
     let crimeComponent = 1
     let locationComponent = 0
     let regionRadius: CLLocationDistance = 800
@@ -34,7 +34,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         pickerView.dataSource = self
 
         pickerData = [locations, crimes]
-        pickerView.selectRow(1, inComponent: crimeComponent, animated: true)
+        pickerView.selectRow(5, inComponent: crimeComponent, animated: true)
+        pickerView.selectRow(5, inComponent: locationComponent, animated: true)
+
 
         // MARK: center location
         centerMapOnLocation(location: currentLocation)
@@ -45,7 +47,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return pickerData[component].count
     }
     func pickerView(_ picker: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-
         getCriteria()
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -65,6 +66,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     // MARK: parse data
     func extractData(_ data: Any) {
+        
         URLCache.shared.removeAllCachedResponses()
 
         if let crimeReport = data as? NSArray

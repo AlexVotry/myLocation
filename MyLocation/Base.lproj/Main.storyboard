@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--home-->
         <scene sceneID="Ppd-6d-k76">
             <objects>
                 <viewController id="I8s-Bu-iaB" customClass="WelcomeViewController" customModule="MyLocation" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                                 <rect key="frame" x="24" y="61" width="327" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="40"/>
-                                <color key="textColor" red="1" green="0.19141208779999999" blue="0.69012976550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw1-Ye-zBp">
@@ -42,7 +42,7 @@
                                 <rect key="frame" x="195" y="194" width="126" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="data/seattle.gov">
-                                    <color key="titleColor" red="0.77485489249999995" green="0.2151063258" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="HyperLink:" destination="I8s-Bu-iaB" eventType="touchUpInside" id="Zt2-A3-IuD"/>
@@ -65,14 +65,21 @@ You can scroll the map manually, or choose one of several provided locations.
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="police" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-1o-uHW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="police" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-1o-uHW">
                                 <rect key="frame" x="16" y="381" width="343" height="187"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="187" id="1eH-RK-IV1"/>
+                                    <constraint firstAttribute="width" constant="343" id="78z-zC-cil"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tmz-d2-L4a" firstAttribute="top" secondItem="NbU-1o-uHW" secondAttribute="bottom" constant="50" id="jy4-Nm-jeX"/>
+                            <constraint firstItem="NbU-1o-uHW" firstAttribute="centerX" secondItem="PQR-yo-YPi" secondAttribute="centerX" id="wj6-kq-Aa7"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="Image" id="1Mr-fJ-auz"/>
+                    <tabBarItem key="tabBarItem" title="home" image="home" id="1Mr-fJ-auz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2G-KY-shT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,15 +159,19 @@ You can scroll the map manually, or choose one of several provided locations.
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eMv-cG-tl9">
                                 <rect key="frame" x="0.0" y="397" width="33" height="145"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="0.90242401541095896" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="7bg-Wx-T8l"/>
                                     <constraint firstAttribute="width" constant="33" id="GpJ-CI-jl7"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPU-fX-J2A">
-                                <rect key="frame" x="130" y="561" width="114" height="30"/>
-                                <state key="normal" title="Show the crimes">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPU-fX-J2A">
+                                <rect key="frame" x="140" y="557" width="95" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="5I0-f2-m7B"/>
+                                    <constraint firstAttribute="width" constant="95" id="yyE-rS-aXR"/>
+                                </constraints>
+                                <state key="normal" image="CheckItOut">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -195,7 +206,9 @@ You can scroll the map manually, or choose one of several provided locations.
                             <constraint firstItem="tel-uF-7FK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yIC-Hc-EQt"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Crime Map" image="crimeMap" id="zdq-OK-0wk"/>
+                    <tabBarItem key="tabBarItem" title="Crime Map" image="criminal" selectedImage="criminal" id="zdq-OK-0wk">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="mapView" destination="pPl-2F-rN8" id="KcW-5i-iws"/>
                         <outlet property="pickerView" destination="YZW-N9-HHK" id="g2U-Qb-TOb"/>
@@ -207,8 +220,9 @@ You can scroll the map manually, or choose one of several provided locations.
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="8" height="8"/>
-        <image name="crimeMap" width="8" height="8"/>
+        <image name="CheckItOut" width="990" height="283"/>
+        <image name="criminal" width="24" height="24"/>
+        <image name="home" width="24" height="24"/>
         <image name="police" width="855" height="446"/>
     </resources>
 </document>

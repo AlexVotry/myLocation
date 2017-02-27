@@ -21,7 +21,7 @@ class Criteria {
       switch criteria {
       case "Auto Theft":
         crime = ["AUTO THEFT", "CAR PROWL", "BICYCLE THEFT"]
-      case "Suspicious Activity":
+      case "Suspicious":
         crime = ["SUSPICIOUS", "MENTAL", "MISCHIEF", "NUISANCE", "LEWD", "NOISE"]
       case "Robbery":
         crime = ["ROBBERY"]
@@ -35,11 +35,11 @@ class Criteria {
         crime = ["HARASSMENT", "HARAS", "THREATS", "DISTURBANCE"]
       case "Fraud":
         crime = ["FRAUD", "FORGERY, BAD CHECKS"]
-      case "Traffic Accident":
+      case "Traffic":
         crime = ["ACCIDENT", "ACC"]
       case "Assault":
         crime = ["ASLT", "FIGHT", "SHOTS", "GUN", "DOWN"]
-      case "Property Damage":
+      case "Property":
         crime = ["PROPERTY - DAMAGE"]
       default:
         crime = [criteria.uppercased()]
