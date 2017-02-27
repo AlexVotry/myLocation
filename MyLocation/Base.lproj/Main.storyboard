@@ -1,15 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4LH-7E-Ttj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
+        <scene sceneID="Ppd-6d-k76">
+            <objects>
+                <viewController id="I8s-Bu-iaB" customClass="WelcomeViewController" customModule="MyLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lnD-55-cdl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tmz-d2-L4a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PQR-yo-YPi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Crime Finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxB-tZ-6aa">
+                                <rect key="frame" x="24" y="61" width="327" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.19141208779999999" blue="0.69012976550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw1-Ye-zBp">
+                                <rect key="frame" x="24" y="172" width="327" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Welcome to the crime finder app.  
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSI-ex-ke6">
+                                <rect key="frame" x="195" y="194" width="126" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="data/seattle.gov">
+                                    <color key="titleColor" red="0.77485489249999995" green="0.2151063258" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="HyperLink:" destination="I8s-Bu-iaB" eventType="touchUpInside" id="Zt2-A3-IuD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEj-gq-iuJ">
+                                <rect key="frame" x="24" y="233" width="327" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">The map will show the different locations for each crime provided by the website.  
+You can scroll the map manually, or choose one of several provided locations.
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The data is used from:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mp0-LJ-dvY">
+                                <rect key="frame" x="24" y="196" width="193" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="police" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-1o-uHW">
+                                <rect key="frame" x="16" y="381" width="343" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="Image" id="1Mr-fJ-auz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S2G-KY-shT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1770.4000000000001" y="-874.81259370314854"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="z4S-Ik-qRU">
+            <objects>
+                <tabBarController id="4LH-7E-Ttj" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Nb9-tq-7vb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="I8s-Bu-iaB" kind="relationship" relationship="viewControllers" id="Wms-of-RkN"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="OBa-Tk-vyE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qpg-JL-FTn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1770" y="-181"/>
+        </scene>
+        <!--Crime Map-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyLocation" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,43 +108,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pPl-2F-rN8">
-                                <rect key="frame" x="0.0" y="30" width="410" height="433"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="410" id="xTj-LL-mi9"/>
-                                </constraints>
-                            </mapView>
                             <pickerView tag="1" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="YZW-N9-HHK">
-                                <rect key="frame" x="27" y="432" width="320" height="177"/>
+                                <rect key="frame" x="27" y="381" width="320" height="173"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="tintColor" red="0.77485489249999995" green="0.2151063258" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="177" id="A1S-JV-esy"/>
+                                    <constraint firstAttribute="height" constant="173" id="B4I-WP-c7i"/>
+                                    <constraint firstAttribute="width" constant="320" id="JbU-CH-Qhf"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Lvn-GT-McK"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPU-fX-J2A">
-                                <rect key="frame" x="130" y="617" width="114" height="30"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pPl-2F-rN8">
+                                <rect key="frame" x="0.0" y="30" width="410" height="408"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Khs-z4-ArC"/>
+                                    <constraint firstAttribute="width" constant="410" id="QiT-FU-y8W"/>
+                                    <constraint firstAttribute="height" constant="408" id="f2I-5d-Zaf"/>
                                 </constraints>
-                                <state key="normal" title="Show the crimes"/>
+                            </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xyR-cw-zvL" userLabel="rightView">
+                                <rect key="frame" x="342" y="395" width="33" height="149"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="56v-Ni-PlW"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w1i-li-FxN">
+                                <rect key="frame" x="0.0" y="520" width="375" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="bln-uT-8Yq"/>
+                                    <constraint firstAttribute="height" constant="34" id="lUd-qu-cOJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tel-uF-7FK">
+                                <rect key="frame" x="0.0" y="381" width="375" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="6fk-qO-Ivx"/>
+                                    <constraint firstAttribute="height" constant="34" id="hMR-kC-QnG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eMv-cG-tl9">
+                                <rect key="frame" x="0.0" y="397" width="33" height="145"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="0.90242401541095896" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="7bg-Wx-T8l"/>
+                                    <constraint firstAttribute="width" constant="33" id="GpJ-CI-jl7"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPU-fX-J2A">
+                                <rect key="frame" x="130" y="561" width="114" height="30"/>
+                                <state key="normal" title="Show the crimes">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="MapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCg-P6-fkE"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WPU-fX-J2A" secondAttribute="bottom" constant="20" id="7AT-S3-1GW"/>
-                            <constraint firstItem="pPl-2F-rN8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="BsE-Dk-fgq"/>
-                            <constraint firstItem="YZW-N9-HHK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LMx-Fh-aka"/>
-                            <constraint firstItem="pPl-2F-rN8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="O5W-i4-WFi"/>
-                            <constraint firstItem="WPU-fX-J2A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sqz-x5-iIH"/>
-                            <constraint firstItem="YZW-N9-HHK" firstAttribute="top" secondItem="pPl-2F-rN8" secondAttribute="bottom" constant="-31" id="hhm-6T-L8N"/>
-                            <constraint firstItem="WPU-fX-J2A" firstAttribute="top" secondItem="YZW-N9-HHK" secondAttribute="bottom" constant="8" id="qHl-X1-iHD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YZW-N9-HHK" secondAttribute="bottom" constant="64" id="4dq-ZD-dY9"/>
+                            <constraint firstItem="pPl-2F-rN8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6PB-gi-Muj"/>
+                            <constraint firstAttribute="trailing" secondItem="xyR-cw-zvL" secondAttribute="trailing" id="9MH-6R-9AL"/>
+                            <constraint firstAttribute="trailing" secondItem="w1i-li-FxN" secondAttribute="trailing" id="A31-JE-Qof"/>
+                            <constraint firstItem="eMv-cG-tl9" firstAttribute="top" secondItem="tel-uF-7FK" secondAttribute="bottom" constant="-18" id="CiT-t2-53s"/>
+                            <constraint firstItem="eMv-cG-tl9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HLW-SK-kov"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WPU-fX-J2A" secondAttribute="bottom" constant="27" id="OK0-o4-jRK"/>
+                            <constraint firstItem="w1i-li-FxN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Pqg-BZ-nwa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YZW-N9-HHK" secondAttribute="trailing" constant="12" id="Tbz-2q-Mvl"/>
+                            <constraint firstAttribute="trailing" secondItem="tel-uF-7FK" secondAttribute="trailing" id="WWi-L2-XfR"/>
+                            <constraint firstAttribute="trailing" secondItem="pPl-2F-rN8" secondAttribute="trailing" constant="-35" id="XNy-dJ-4bN"/>
+                            <constraint firstItem="w1i-li-FxN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="c1o-ll-T45"/>
+                            <constraint firstItem="pPl-2F-rN8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="cwf-k4-150"/>
+                            <constraint firstItem="w1i-li-FxN" firstAttribute="top" secondItem="eMv-cG-tl9" secondAttribute="bottom" constant="-22" id="hFI-RI-9gR"/>
+                            <constraint firstItem="tel-uF-7FK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hhW-4d-Et0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eMv-cG-tl9" secondAttribute="bottom" constant="76" id="mB4-Yb-cX5"/>
+                            <constraint firstAttribute="trailing" secondItem="tel-uF-7FK" secondAttribute="trailing" id="neK-1c-uX7"/>
+                            <constraint firstItem="xyR-cw-zvL" firstAttribute="top" secondItem="tel-uF-7FK" secondAttribute="bottom" constant="-20" id="pqT-Yc-LDi"/>
+                            <constraint firstItem="w1i-li-FxN" firstAttribute="top" secondItem="xyR-cw-zvL" secondAttribute="bottom" constant="-24" id="spv-j2-Lre"/>
+                            <constraint firstItem="YZW-N9-HHK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="uXE-5x-FeQ"/>
+                            <constraint firstAttribute="trailing" secondItem="w1i-li-FxN" secondAttribute="trailing" id="xHb-md-3nJ"/>
+                            <constraint firstItem="WPU-fX-J2A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xwq-6b-Zci"/>
+                            <constraint firstItem="tel-uF-7FK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yIC-Hc-EQt"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Crime Map" image="crimeMap" id="zdq-OK-0wk"/>
                     <connections>
                         <outlet property="mapView" destination="pPl-2F-rN8" id="KcW-5i-iws"/>
                         <outlet property="pickerView" destination="YZW-N9-HHK" id="g2U-Qb-TOb"/>
@@ -65,7 +203,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87.200000000000003" y="138.0809595202399"/>
+            <point key="canvasLocation" x="-804" y="-181.25937031484258"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="8" height="8"/>
+        <image name="crimeMap" width="8" height="8"/>
+        <image name="police" width="855" height="446"/>
+    </resources>
 </document>

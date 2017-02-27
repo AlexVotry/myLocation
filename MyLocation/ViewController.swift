@@ -21,8 +21,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var group = Crime()
     var criteria: Criteria?
     var pickerData: [[String]] = [[String]]()
-    var crimes = ["Auto Theft", "Suspicious Activity", "Robbery", "Drugs", "Burgulary", "Theft", "All", "Harrassment",  "Fraud", "Property Damage", "Traffic Accident", "Assault"]
-    var locations = ["Ballard", "Northgate", "Greenlake", "University District", "Queen Anne", "Capitol Hill", "Downtown", "Beacon Hill", "West Seattle", "White Center"]
+    var crimes = ["Auto Theft", "Suspicious", "Robbery", "Drugs", "Burgulary", "Theft", "All", "Harrassment",  "Fraud", "Property", "Traffic", "Assault"]
+    var locations = ["Ballard", "Northgate", "Greenlake", "University", "Queen Anne", "Capitol Hill", "Downtown", "Beacon Hill", "West Seattle", "White Center"]
     let crimeComponent = 1
     let locationComponent = 0
     let regionRadius: CLLocationDistance = 800
