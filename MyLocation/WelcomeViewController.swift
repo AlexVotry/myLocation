@@ -10,9 +10,10 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
+    @IBOutlet weak var GifView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        GifView.loadGif(name: "scooby")
         
         // Do any additional setup after loading the view.
     }

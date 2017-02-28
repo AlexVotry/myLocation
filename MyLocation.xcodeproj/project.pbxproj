@@ -20,6 +20,8 @@
 		FA33272C1E5CD82900143994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA33272B1E5CD82900143994 /* Assets.xcassets */; };
 		FA33272F1E5CD82900143994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA33272D1E5CD82900143994 /* LaunchScreen.storyboard */; };
 		FA3327381E5CD87900143994 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3327371E5CD87900143994 /* MapKit.framework */; };
+		FA3E6FF51E6507FC0017EECD /* SwiftGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E6FF41E6507FC0017EECD /* SwiftGif.swift */; };
+		FA3E6FF71E6509290017EECD /* scooby.gif in Resources */ = {isa = PBXBuildFile; fileRef = FA3E6FF61E6509290017EECD /* scooby.gif */; };
 		FA9180F91E5F9E01006016CE /* crime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9180F81E5F9E01006016CE /* crime.swift */; };
 		FAAA93C61E5CE4B000B321A1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA93C51E5CE4B000B321A1 /* LocationManager.swift */; };
 		FAB80AAA1E63A12900F1B22C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB80AA91E63A12900F1B22C /* WelcomeViewController.swift */; };
@@ -44,6 +46,8 @@
 		FA33272E1E5CD82900143994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA3327301E5CD82900143994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA3327371E5CD87900143994 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FA3E6FF41E6507FC0017EECD /* SwiftGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGif.swift; sourceTree = "<group>"; };
+		FA3E6FF61E6509290017EECD /* scooby.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = scooby.gif; sourceTree = "<group>"; };
 		FA9180F81E5F9E01006016CE /* crime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crime.swift; sourceTree = "<group>"; };
 		FAAA93C51E5CE4B000B321A1 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FAB80AA91E63A12900F1B22C /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +102,9 @@
 				FA3327211E5CD82900143994 /* AppDelegate.swift */,
 				FA3327231E5CD82900143994 /* ViewController.swift */,
 				FA3327251E5CD82900143994 /* Main.storyboard */,
+				FA3E6FF41E6507FC0017EECD /* SwiftGif.swift */,
 				FA33272B1E5CD82900143994 /* Assets.xcassets */,
+				FA3E6FF61E6509290017EECD /* scooby.gif */,
 				FA33272D1E5CD82900143994 /* LaunchScreen.storyboard */,
 				FA3327301E5CD82900143994 /* Info.plist */,
 				FA3327281E5CD82900143994 /* MyLocation.xcdatamodeld */,
@@ -186,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA33272F1E5CD82900143994 /* LaunchScreen.storyboard in Resources */,
+				FA3E6FF71E6509290017EECD /* scooby.gif in Resources */,
 				FA33272C1E5CD82900143994 /* Assets.xcassets in Resources */,
 				FA3327271E5CD82900143994 /* Main.storyboard in Resources */,
 			);
@@ -251,6 +258,7 @@
 				FA275EC41E5D24E300549176 /* JSON.swift in Sources */,
 				FA3327241E5CD82900143994 /* ViewController.swift in Sources */,
 				FA9180F91E5F9E01006016CE /* crime.swift in Sources */,
+				FA3E6FF51E6507FC0017EECD /* SwiftGif.swift in Sources */,
 				FA33272A1E5CD82900143994 /* MyLocation.xcdatamodeld in Sources */,
 				FA275EBF1E5D03F700549176 /* Cops.swift in Sources */,
 				FA1C33FF1E5F61510048BFD1 /* Criteria.swift in Sources */,

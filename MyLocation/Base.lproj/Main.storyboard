@@ -22,25 +22,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Crime Finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxB-tZ-6aa">
-                                <rect key="frame" x="24" y="61" width="327" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="40"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw1-Ye-zBp">
-                                <rect key="frame" x="24" y="172" width="327" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw1-Ye-zBp">
+                                <rect key="frame" x="24" y="212" width="327" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="327" id="Wd4-M9-ACZ"/>
+                                    <constraint firstAttribute="height" constant="53" id="Z6J-4A-hwC"/>
+                                </constraints>
                                 <string key="text">Welcome to the crime finder app.  
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSI-ex-ke6">
-                                <rect key="frame" x="195" y="194" width="126" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSI-ex-ke6">
+                                <rect key="frame" x="196" y="231" width="126" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="a8T-Zw-ZTv"/>
+                                    <constraint firstAttribute="width" constant="126" id="olE-Jz-zQw"/>
+                                </constraints>
                                 <state key="normal" title="data/seattle.gov">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -48,9 +47,12 @@
                                     <action selector="HyperLink:" destination="I8s-Bu-iaB" eventType="touchUpInside" id="Zt2-A3-IuD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEj-gq-iuJ">
-                                <rect key="frame" x="24" y="233" width="327" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEj-gq-iuJ">
+                                <rect key="frame" x="24" y="265" width="327" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="327" id="fvw-Vr-q7z"/>
+                                    <constraint firstAttribute="height" constant="108" id="zWR-sF-dlT"/>
+                                </constraints>
                                 <string key="text">The map will show the different locations for each crime provided by the website.  
 You can scroll the map manually, or choose one of several provided locations.
 </string>
@@ -58,9 +60,12 @@ You can scroll the map manually, or choose one of several provided locations.
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The data is used from:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mp0-LJ-dvY">
-                                <rect key="frame" x="24" y="196" width="193" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The data is used from:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mp0-LJ-dvY">
+                                <rect key="frame" x="24" y="233" width="193" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="YtH-jU-FT4"/>
+                                    <constraint firstAttribute="height" constant="42" id="i5R-HG-2Xr"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,14 +77,50 @@ You can scroll the map manually, or choose one of several provided locations.
                                     <constraint firstAttribute="width" constant="343" id="78z-zC-cil"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e1n-fj-FKT">
+                                <rect key="frame" x="24" y="60" width="327" height="151"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="327" id="JTE-7L-1Ep"/>
+                                    <constraint firstAttribute="height" constant="151" id="O6V-HY-jQk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crime Finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxB-tZ-6aa">
+                                <rect key="frame" x="24" y="0.0" width="327" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="gxg-Jb-TwM"/>
+                                    <constraint firstAttribute="width" constant="327" id="nko-GS-fZz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="jw1-Ye-zBp" firstAttribute="top" secondItem="e1n-fj-FKT" secondAttribute="bottom" constant="1" id="EKP-GZ-1WZ"/>
+                            <constraint firstItem="e1n-fj-FKT" firstAttribute="top" secondItem="oxB-tZ-6aa" secondAttribute="bottom" constant="8" id="Jmy-FC-ONl"/>
+                            <constraint firstItem="oxB-tZ-6aa" firstAttribute="centerX" secondItem="PQR-yo-YPi" secondAttribute="centerX" id="Js3-WN-QRA"/>
+                            <constraint firstItem="jw1-Ye-zBp" firstAttribute="leading" secondItem="PQR-yo-YPi" secondAttribute="leadingMargin" constant="8" id="KDH-Ms-XRV"/>
+                            <constraint firstItem="Mp0-LJ-dvY" firstAttribute="leading" secondItem="PQR-yo-YPi" secondAttribute="leadingMargin" constant="8" id="L2S-c7-P4e"/>
+                            <constraint firstItem="Mp0-LJ-dvY" firstAttribute="top" secondItem="jw1-Ye-zBp" secondAttribute="bottom" constant="-32" id="W4b-I6-VdG"/>
+                            <constraint firstItem="zEj-gq-iuJ" firstAttribute="leading" secondItem="PQR-yo-YPi" secondAttribute="leadingMargin" constant="8" id="Y7z-19-F9u"/>
+                            <constraint firstItem="jw1-Ye-zBp" firstAttribute="leading" secondItem="PQR-yo-YPi" secondAttribute="leadingMargin" constant="8" id="dKI-tt-YGX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jSI-ex-ke6" secondAttribute="trailing" constant="37" id="eEf-2M-vL1"/>
+                            <constraint firstItem="zEj-gq-iuJ" firstAttribute="centerX" secondItem="PQR-yo-YPi" secondAttribute="centerX" id="fDJ-s0-91q"/>
+                            <constraint firstItem="e1n-fj-FKT" firstAttribute="centerX" secondItem="PQR-yo-YPi" secondAttribute="centerX" id="fFz-dZ-eAn"/>
+                            <constraint firstItem="Mp0-LJ-dvY" firstAttribute="leading" secondItem="PQR-yo-YPi" secondAttribute="leadingMargin" constant="8" id="hdO-94-iBt"/>
                             <constraint firstItem="Tmz-d2-L4a" firstAttribute="top" secondItem="NbU-1o-uHW" secondAttribute="bottom" constant="50" id="jy4-Nm-jeX"/>
+                            <constraint firstItem="jw1-Ye-zBp" firstAttribute="centerX" secondItem="PQR-yo-YPi" secondAttribute="centerX" id="l0a-VW-By0"/>
+                            <constraint firstItem="NbU-1o-uHW" firstAttribute="top" secondItem="e1n-fj-FKT" secondAttribute="bottom" constant="170" id="lHE-yc-tEm"/>
+                            <constraint firstItem="zEj-gq-iuJ" firstAttribute="top" secondItem="jSI-ex-ke6" secondAttribute="bottom" constant="-13" id="pJy-J5-xku"/>
+                            <constraint firstItem="zEj-gq-iuJ" firstAttribute="top" secondItem="Mp0-LJ-dvY" secondAttribute="bottom" constant="-10" id="tI9-je-9xm"/>
                             <constraint firstItem="NbU-1o-uHW" firstAttribute="centerX" secondItem="PQR-yo-YPi" secondAttribute="centerX" id="wj6-kq-Aa7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="home" image="home" id="1Mr-fJ-auz"/>
+                    <connections>
+                        <outlet property="GifView" destination="e1n-fj-FKT" id="4za-8I-NzM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2G-KY-shT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
