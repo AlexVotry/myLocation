@@ -56,49 +56,42 @@ class Cops: NSObject, MKAnnotation {
         switch crime {
         case "AUTO THEFT",
              "THEFT - CAR PROWL",
-             "BICYCLE THEFT":
+             "BICYCLE THEFT",
+             "ARMED ROBBERY",
+             "STRONG ARM ROBBERY",
+             "ALARMS - RESIDENTIAL BURGLARY",
+             "BURGLARY - RESIDENTIAL, UNOCCUPIED",
+             "TRESPASS",
+             "BURGLARY - COMMERCIAL",
+             "BURGLARY - UNOCCUPIED STRUCTURE ON RESIDENTIAL PROPERTY",
+             "SUSPICIOUS CIRCUMSTANCES - BUILDING (OPEN DOOR, ETC.)",
+             "FRAUD (INCLUDING IDENTITY THEFT)",
+             "FORGERY, BAD CHECKS":
           color = MKPinAnnotationView.purplePinColor()
+            
         case "SUSPICIOUS PERSON",
              "SUSPICIOUS VEHICLE",
              "MENTAL COMPLAINT",
              "MISCHIEF, NUISANCE COMPLAINTS",
              "LEWD CONDUCT",
              "NOISE DISTURBANCE",
-             "PORNOGRAPHY":
+             "PORNOGRAPHY",
+             "HARASSMENT, THREATS",
+             "ASSAULTS, OTHER",
+             "PERSON WITH A WEAPON (NOT GUN)",
+             "PERSON WITH A GUN":
           color = MKPinAnnotationView.redPinColor()
-        case "ARMED ROBBERY",
-             "STRONG ARM ROBBERY":
-          color = MKPinAnnotationView.purplePinColor()
+
         case "NARCOTICS, OTHER",
              "LIQUOR VIOLATION - INTOXICATED PERSON",
              "LIQUOR VIOLATION - ADULT",
              "NARCOTICS ACTIVITY REPORT",
-             "VICE, OTHER", "CASUALTY - DRUG RELATED (OVERDOSE, OTHER)":
+             "VICE, OTHER", "CASUALTY - DRUG RELATED (OVERDOSE, OTHER)",
+             "PROPERTY - DAMAGE",
+             "ACCIDENT INVESTIGATION",
+             "GANG GRAFFITI":
           color = MKPinAnnotationView.greenPinColor()
-        case "ALARMS - RESIDENTIAL BURGLARY",
-             "BURGLARY - RESIDENTIAL, UNOCCUPIED",
-             "TRESPASS",
-             "BURGLARY - COMMERCIAL",
-             "BURGLARY - UNOCCUPIED STRUCTURE ON RESIDENTIAL PROPERTY",
-             "SUSPICIOUS CIRCUMSTANCES - BUILDING (OPEN DOOR, ETC.)":
-          color = MKPinAnnotationView.purplePinColor()
-        case "HARASSMENT, THREATS":
-          color = MKPinAnnotationView.redPinColor()
-        case "PROPERTY - DAMAGE":
-          color = MKPinAnnotationView.greenPinColor()
-        case "FRAUD (INCLUDING IDENTITY THEFT)",
-             "FORGERY, BAD CHECKS":
-          color = MKPinAnnotationView.purplePinColor()
-        case "ACCIDENT INVESTIGATION":
-          color = MKPinAnnotationView.greenPinColor()
-        case "GANG GRAFFITI":
-          color = MKPinAnnotationView.greenPinColor()
-        case "ASSAULTS, OTHER",
-             "PERSON WITH A WEAPON (NOT GUN)",
-             "PERSON WITH A GUN":
-          color = MKPinAnnotationView.redPinColor()
-        case "MISSING PERSON":
-          color = MKPinAnnotationView.redPinColor()
+
         default:
           color = MKPinAnnotationView.greenPinColor()
         }
